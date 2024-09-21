@@ -5,7 +5,8 @@
   "main": "openai.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "node openai.js"
   },
   "dependencies": {
     "axios": "^1.7.7",
