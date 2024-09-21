@@ -1,6 +1,6 @@
 /* General body styling */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Source Code Pro', monospace; /* Apply Google monospace font */
     background-color: #2E2E2E; /* Dark gray background */
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ body {
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #00d9a5; /* Aqua green title color */
+    color: #ADD8E6; /* Light blue title color */
 }
 
 /* Textarea for input */
