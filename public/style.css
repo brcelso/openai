@@ -8,12 +8,14 @@ body {
     height: 100vh;
     margin: 0;
     color: #fff;
-    padding: 0 15px;
+    padding: 0 15px; /* Add padding to body for mobile spacing */
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height */
 }
 
 /* Container for the whole app */
 .container {
     width: 60%;
+    max-width: 100%;  /* Ensure container doesn't exceed screen width */
     padding: 30px;
     background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
@@ -21,6 +23,7 @@ body {
     border-radius: 25px;
     text-align: center;
     color: #fff;
+    box-sizing: border-box;
 }
 
 /* Styling the title */
@@ -32,7 +35,7 @@ h1 {
 
 /* Textarea for input */
 textarea {
-    width: 100%;
+    width: 100%;  /* Ensure textarea doesn't exceed container width */
     height: 150px;
     margin-bottom: 15px;
     padding: 15px;
@@ -44,11 +47,12 @@ textarea {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
     resize: none;
     outline: none;
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 /* Submit button styling */
 button {
-    width: 100%;
+    width: 100%;  /* Ensure button is full width within container */
     padding: 15px;
     background: linear-gradient(90deg, #f72585, #7209b7);
     color: white;
@@ -58,6 +62,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out, transform 0.2s;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -75,6 +80,7 @@ button:hover {
     color: #f1f1f1;
     font-size: 18px;
     white-space: pre-wrap;
+    box-sizing: border-box;
 }
 
 /* Media Queries for mobile responsiveness */
