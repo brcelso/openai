@@ -1,83 +1,131 @@
-/* General Styles */
+/* General body styling */
 body {
-    font-family: 'Poppins', sans-serif; /* Use a modern font */
-    background-color: #f9f0ff; /* Light purple background */
-    margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #4a0072; /* Deep purple text */
+    margin: 0;
+    color: #fff;
+    padding: 0 15px;
 }
 
-/* Container Styling */
+/* Container for the whole app */
 .container {
-    width: 50%;
-    padding: 20px;
-    background-color: white; /* White background for container */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    border-radius: 20px; /* Rounded corners */
-    text-align: center; /* Center text in the container */
-    max-width: 500px; /* Restrict maximum width */
+    width: 60%;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
 }
 
-/* Title Styling */
+/* Styling the title */
 h1 {
-    margin-bottom: 20px;
-    color: #ab47bc; /* Light purple title */
     font-size: 2rem;
-    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f7b42c;
 }
 
-/* Textarea Styling */
+/* Textarea for input */
 textarea {
     width: 100%;
     height: 150px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     padding: 15px;
-    border-radius: 15px; /* Rounded edges */
-    border: 2px solid #ce93d8; /* Light purple border */
-    background-color: #f3e5f5; /* Light purple background */
-    font-size: 1rem;
-    color: #4a0072; /* Deep purple text */
-    outline: none; /* Remove outline when focused */
-    transition: border-color 0.3s ease; /* Smooth border transition */
+    border: none;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    resize: none;
+    outline: none;
 }
 
-/* Change border on focus */
-textarea:focus {
-    border-color: #ab47bc; /* Darker purple on focus */
-}
-
-/* Button Styling */
+/* Submit button styling */
 button {
     width: 100%;
     padding: 15px;
-    background-color: #d500f9; /* Bright pink button */
-    color: white; /* White text */
+    background: linear-gradient(90deg, #f72585, #7209b7);
+    color: white;
     border: none;
-    border-radius: 25px; /* Fully rounded button */
-    font-size: 1.2rem;
+    border-radius: 30px;
+    font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth color and hover transition */
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
 }
 
-/* Hover effect for button */
 button:hover {
-    background-color: #aa00ff; /* Darker purple on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
+    background: linear-gradient(90deg, #b5179e, #560bad);
+    transform: scale(1.05);
 }
 
-/* Response box styling */
+/* Styling the response box */
 #response {
-    margin-top: 20px;
+    margin-top: 25px;
     padding: 20px;
-    background-color: #f3e5f5; /* Light purple background */
-    border: 2px solid #ce93d8; /* Light purple border */
-    border-radius: 15px; /* Rounded corners */
-    color: #4a0072; /* Deep purple text */
-    font-size: 1rem;
-    word-wrap: break-word; /* Wrap long words to fit in the box */
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #f1f1f1;
+    font-size: 18px;
+    white-space: pre-wrap;
+}
+
+/* Media Queries for mobile responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;   /* Make the container smaller on mobile */
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Slightly smaller title on mobile */
+    }
+
+    textarea {
+        height: 120px; /* Shorter textarea for mobile */
+        font-size: 14px; /* Reduce font size inside the textarea */
+    }
+
+    button {
+        font-size: 16px; /* Make the button font size smaller */
+        padding: 12px;   /* Reduce button padding for mobile */
+    }
+
+    #response {
+        font-size: 16px; /* Smaller font size for response text */
+        padding: 15px;   /* Less padding around the response */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;  /* Full-width container on very small screens */
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Make the title even smaller for tiny screens */
+    }
+
+    textarea {
+        height: 100px;  /* Shorten the textarea even more for very small screens */
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;  /* Make the button font smaller on small screens */
+        padding: 10px;    /* Reduce padding for very small screens */
+    }
+
+    #response {
+        font-size: 14px; /* Smaller response text */
+        padding: 10px;
+    }
 }
