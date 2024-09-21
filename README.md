@@ -8,3 +8,5 @@ This repository contains a structured implementation for integrating with the Op
 - `src/`: Source code for the application.
 - `tests/`: Unit and integration tests.
 - `README.md`: Documentation for the project.
+
+## ADD .env in the admin source
