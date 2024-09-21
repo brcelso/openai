@@ -9,7 +9,7 @@ async function getOpenAIResponse(prompt) {
 
     try {
         const response = await axios.post(url, {
-            model: 'gpt-3.5-turbo', // or another model like 'gpt-4'
+            model: 'gpt-4o-mini', // or another model like 'gpt-4'
             messages: [{ role: 'user', content: prompt }],
         }, {
             headers: {
