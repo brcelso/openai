@@ -5,6 +5,11 @@ const axios = require('axios');
 const app = express();
 app.use(express.json());
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log('Server is running on http://localhost:${PORT}');
+});
+
 // Serve static files from the 'public' directory
 app.use(express.static(path.join(__dirname, 'public')));
 
