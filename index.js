@@ -1,7 +1,8 @@
+require('dotenv').config();
 const axios = require('axios');
 
-// Set your OpenAI API key here
-const apiKey = 'YOUR_API_KEY';
+// Get your OpenAI API key from the environment variable
+const apiKey = process.env.OPENAI_API_KEY;
 
 async function getOpenAIResponse(prompt) {
     const url = 'https://api.openai.com/v1/chat/completions';
