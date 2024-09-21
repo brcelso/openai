@@ -2,7 +2,7 @@
   "name": "openai",
   "version": "1.0.0",
   "description": "A simple example of using the OpenAI API",
-  "main": "server.js",
+  "main": "openai.js",
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
