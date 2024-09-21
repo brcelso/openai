@@ -1,4 +1,6 @@
-require('dotenv').config();
+//old configuration
+
+equire('dotenv').config();
 const axios = require('axios');
 
 // Get your OpenAI API key from the environment variable
