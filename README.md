@@ -10,3 +10,4 @@ This repository contains a structured implementation for integrating with the Op
 - `README.md`: Documentation for the project.
 
 ## ADD .env in the admin source
+npm start
