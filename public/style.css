@@ -1,49 +1,83 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Use a modern font */
+    background-color: #f9f0ff; /* Light purple background */
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    color: #4a0072; /* Deep purple text */
 }
 
+/* Container Styling */
 .container {
     width: 50%;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white; /* White background for container */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    border-radius: 20px; /* Rounded corners */
+    text-align: center; /* Center text in the container */
+    max-width: 500px; /* Restrict maximum width */
 }
 
+/* Title Styling */
 h1 {
-    text-align: center;
+    margin-bottom: 20px;
+    color: #ab47bc; /* Light purple title */
+    font-size: 2rem;
+    font-weight: 700;
 }
 
+/* Textarea Styling */
 textarea {
     width: 100%;
     height: 150px;
-    margin-bottom: 10px;
-    padding: 10px;
-    font-size: 16px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 15px; /* Rounded edges */
+    border: 2px solid #ce93d8; /* Light purple border */
+    background-color: #f3e5f5; /* Light purple background */
+    font-size: 1rem;
+    color: #4a0072; /* Deep purple text */
+    outline: none; /* Remove outline when focused */
+    transition: border-color 0.3s ease; /* Smooth border transition */
 }
 
+/* Change border on focus */
+textarea:focus {
+    border-color: #ab47bc; /* Darker purple on focus */
+}
+
+/* Button Styling */
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #007BFF;
-    color: white;
+    padding: 15px;
+    background-color: #d500f9; /* Bright pink button */
+    color: white; /* White text */
     border: none;
+    border-radius: 25px; /* Fully rounded button */
+    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
-    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth color and hover transition */
 }
 
+/* Hover effect for button */
 button:hover {
-    background-color: #0056b3;
+    background-color: #aa00ff; /* Darker purple on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
+/* Response box styling */
 #response {
     margin-top: 20px;
-    font-size: 16px;
-    color: #333;
+    padding: 20px;
+    background-color: #f3e5f5; /* Light purple background */
+    border: 2px solid #ce93d8; /* Light purple border */
+    border-radius: 15px; /* Rounded corners */
+    color: #4a0072; /* Deep purple text */
+    font-size: 1rem;
+    word-wrap: break-word; /* Wrap long words to fit in the box */
 }
