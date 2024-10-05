@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "build": "node app.js"
+    "build": "node app.js",
+    "test": "nodemon server.js"
   },
   "dependencies": {
     "axios": "^1.7.7",
