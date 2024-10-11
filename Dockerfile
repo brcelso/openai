@@ -1,20 +1,21 @@
-# Use an official base image (e.g., Node.js)
-FROM node:14
+# 1. Use an official Node.js runtime as a base image
+FROM node:18
 
-# Set the working directory inside the container
-WORKDIR /
+# 2. Set the working directory
+WORKDIR /usr/src/app
 
-# Copy the package.json and package-lock.json
+# 3. Copy package.json and install dependencies
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy the rest of the application code
+# 4. Copy the rest of your code
 COPY . .
 
-# Expose the application port
+# 5. Set environment variable (can be passed at runtime or from GitHub Actions)
+ENV OPENAI_API_KEY=${OPENAI_API_KEY}
+
+# 6. Expose the application port (adjust if your app uses another port)
 EXPOSE 3000
 
-# Define the command to run your app
-CMD ["npm", "build"]
+# 7. Define the command to run your app (ensure you have a start script in package.json)
+CMD ["npm", "start"]
