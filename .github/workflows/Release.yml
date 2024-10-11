@@ -1,0 +1,26 @@
+name: Release
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Step 2: Build the Docker image
+      - name: Build Docker image
+        run: docker build . -t celsosjunior/openai
+
+      # Step 3: Log in to Docker Hub using secrets
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" --password-stdin
+
+      # Step 4: Push the Docker image to Docker Hub
+      - name: Push Docker image
+        run: docker push celsosjunior/openai
