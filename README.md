@@ -1,4 +1,4 @@
-# OpenAI API Integration
+# OpenAI API + Docker Integration
 
 Link: https://celsogpt.vercel.app
 
