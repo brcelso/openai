@@ -19,7 +19,7 @@
     "node": ">=14.0.0"
   },
   "author": "Celso",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "nodemon": "^3.1.7"
   }
